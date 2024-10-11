@@ -1,0 +1,271 @@
+@import url('https://fonts.googleapis.com/css2?family=Piazzolla:ital,opsz,wght@0,8..30,100..900;1,8..30,100..900&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    font-family: "Piazzolla", serif;
+}
+
+:root{
+    --main-bg:#1e272e;
+    --main-color:#0097e6;
+}
+
+body{
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+html{
+    font-size: 50.5%;
+}
+
+
+.main-menu {
+    background-color: var(--main-bg);
+}
+
+.main-menu .navbar .navbar-brand,
+.main-menu .navbar .nav-link {
+    color: #fff ; /* Ensure links and brand text are white */
+    font-size: 1.8rem;
+}
+
+
+.main-menu .navbar{
+    padding: 2rem 0;
+}
+
+.navbar-toggler-icon{
+    background-color: gray;
+}
+
+.navbar li{
+    margin-left: 2rem;
+}
+
+.main-menu .navbar .nav-link:hover,
+.main-menu .navbar .navbar-brand:hover {
+    color: var(--main-color) !important; /* Force hover color */
+}
+
+.main-menu .navbar .navbar-brand i{
+    color: var(--main-color);
+}
+
+.main_header_left{
+    height: 60rem;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-direction: column;
+}
+
+.main_header_left p{
+    font-size: 2rem;
+}
+
+.main_header_left h3{
+    font-size: 3.3rem;
+    margin: 1rem 0 4rem 0;
+    text-transform: capitalize;
+}
+
+.main_header_left .title_clr{
+    color: var(--main-color);
+    font-style: bold;
+}
+
+.main_header_left button{
+    border: none;
+    padding: 0.8rem 1.8rem;
+    font-size: 1.4rem;
+    border-radius: 2rem;
+    text-transform: uppercase;
+    box-shadow: 0 8px  6px -6px #000;
+    outline: none;
+}
+
+.main_header_left button:hover{
+    box-shadow: 0 8px  6px -6px var(--main-color);
+}
+.main_header_right{
+    height: 60rem;
+    display: flex;
+    justify-content: center;
+    /* align-items: flex-end; */
+    flex-direction: column;
+}
+
+footer{
+    width: 100%;
+    background-color: var(--main-bg);
+    margin-top: auto;
+}
+
+footer .title_clr{
+    color: var(--main-color);
+}
+footer p{
+    margin: 0;
+    text-align: center;
+    color: white;
+    line-height: 5rem;
+    font-size: 1.3rem;
+}
+
+.main_header_right figure {
+    display:flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.main_header .row{
+    margin: 0;
+}
+
+.errorfig{
+    margin-left: auto;
+}
+
+@media(max-width:768px){
+    .main_header_left{
+        height: auto;
+        margin: 5rem 0;
+    }
+    .main_header_right{
+        height: auto;
+        margin: 3rem 3px;
+    }
+    .main_header_right figure img{
+        width: 290px;
+        height: 280px;
+        margin: 0;
+    }
+}
+
+
+
+
+
+
+/* weather styling */
+
+/* Main Content Container Styling */
+.main_content {
+    background-color: #f9f9f9;
+    padding: 3rem;
+    border-radius: 15px;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    width: 100%;
+    max-width: 550px;
+    margin: auto;
+    border: 2px solid #e0e0e0;
+    margin-top: 7rem;
+}
+
+/* Form Styling - Stacked Layout */
+.temp_form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 30px;
+}
+
+.temp_form input[type="text"] {
+    width: 100%;
+    max-width: 300px;
+    padding: 12px;
+    border: 2px solid #ccc;
+    border-radius: 8px;
+    margin-bottom: 15px;
+    font-size: 1rem;
+    transition: border-color 0.3s;
+}
+
+.temp_form input[type="text"]:focus {
+    border-color: #2575fc;
+}
+
+.temp_form input[type="submit"] {
+    padding: 12px 30px;
+    border: none;
+    background-color: var(--main-color);
+    color: white;
+    font-size: 1.2rem;
+    cursor: pointer;
+    border-radius: 8px;
+    transition: background-color 0.3s;
+}
+
+.temp_form input[type="submit"]:hover {
+    background-color: #fff;
+    color: var(--main-color);
+    border: 1px solid var(--main-color);
+}
+
+/* Temperature Information Styling */
+.tempInformation {
+    background-color: #e6e6e6;
+    padding: 2rem;
+    border-radius: 12px;
+}
+
+.top_layer {
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 25px;
+}
+
+.top_layer p {
+    font-size: 1.4rem;
+    font-weight: 600;
+}
+
+.main_layer {
+    text-align: center;
+}
+
+#city_name {
+    font-size: 1.8rem;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.middle_layer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
+#temp {
+    font-size: 4rem;
+    font-weight: bold;
+    color: #ff6600;
+}
+
+#temp_status {
+    font-size: 5rem;
+    color: #007bff;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    .temp_form input[type="text"] {
+        width: 90%;
+    }
+
+    .main_content {
+        padding: 2rem;
+    }
+
+    #temp {
+        font-size: 3rem;
+    }
+
+    #temp_status {
+        font-size: 2rem;
+    }
+}
